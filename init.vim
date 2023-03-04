@@ -2,12 +2,8 @@ lua << EOF
 require('plugins')
 require('lsp/setup')
 require('lsp/nvim-cmp')
+require('format')
 EOF
-
-call maktaba#plugin#Install(maktaba#path#Join(['/Users/thomas/.local/share/nvim/site/pack/packer/start', 'vim-codefmt']))
-call glaive#Install()
-
-Glaive codefmt luaformatterfiveone_executable='lua-format'
 
 " map leader key
 let mapleader = ","
