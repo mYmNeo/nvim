@@ -61,6 +61,26 @@ require("formatter").setup({
 			end,
 		},
 
+		json = {
+			function()
+				return {
+					exe = "jq",
+					args = { "." },
+					stdin = true,
+				}
+			end,
+		},
+
+		yaml = {
+			function()
+				return {
+					exe = "yamlfmt",
+					args = { "-in" },
+					stdin = true,
+				}
+			end,
+		},
+
 		-- Use the special "*" filetype for defining formatter configurations on
 		-- any filetype
 		["*"] = {

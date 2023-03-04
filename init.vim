@@ -5,6 +5,12 @@ require('lsp/nvim-cmp')
 require('format')
 EOF
 
+" formatter
+augroup FormatAutogroup
+  autocmd!
+  autocmd BufWritePost * FormatWrite
+augroup END
+
 " map leader key
 let mapleader = ","
 
@@ -60,14 +66,11 @@ set smartcase
 " Hide matched on <Leader>space
 nnoremap <leader><space> :nohlsearch<CR>
 
-" goto the middle of a line
-"nnoremap <leader>m :call cursor(0, len(getline('.'))/2)<CR>
-
 " Quit windows on <leader>q
 nnoremap <leader>q :q<CR>
 
 " substitute
-nnoremap <leader>ss :%s/
+nnoremap <leader>ss :%s,
 
 " next split and prev split
 nnoremap <leader>wl <c-w>l
