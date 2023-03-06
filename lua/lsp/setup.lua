@@ -1,5 +1,12 @@
 local lsp_installer = require("mason")
-lsp_installer.setup({})
+
+lsp_installer.setup({
+	check_outdated_packages_on_open = true,
+})
+
+require("mason-lspconfig").setup({
+	automatic_installation = true,
+})
 
 -- 安装列表
 -- https://github.com/williamboman/nvim-lsp-installer#available-lsps
