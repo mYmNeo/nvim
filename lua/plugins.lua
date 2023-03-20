@@ -14,6 +14,44 @@ return require("packer").startup(function(use)
 		"williamboman/mason-lspconfig.nvim",
 		"neovim/nvim-lspconfig",
 	})
+	use("kyazdani42/nvim-web-devicons")
+
+	-- comment
+	use({
+		"numToStr/Comment.nvim",
+		config = function()
+			require("Comment").setup()
+		end,
+	})
+
+	-- galaxyline
+	use({
+		"NTBBloodbath/galaxyline.nvim",
+		-- some optional icons
+		requires = { "kyazdani42/nvim-web-devicons", opt = true },
+	})
+
+	-- trouble.vim
+	use({
+		"folke/trouble.nvim",
+		requires = "nvim-tree/nvim-web-devicons",
+		config = function()
+			require("trouble").setup({
+				icons = false,
+				fold_open = "v", -- icon used for open folds
+				fold_closed = ">", -- icon used for closed folds
+				indent_lines = false, -- add an indent guide below the fold icons
+				signs = {
+					-- icons / text used for a diagnostic
+					error = "error",
+					warning = "warn",
+					hint = "hint",
+					information = "info",
+				},
+				use_diagnostic_signs = false, -- enabling this will use the signs defined in your lsp client
+			})
+		end,
+	})
 
 	-- Copolit
 	use({
@@ -46,13 +84,18 @@ return require("packer").startup(function(use)
 	-- Formatter
 	use("mhartington/formatter.nvim")
 
+	-- tree
+	use({
+		"nvim-tree/nvim-tree.lua",
+		requires = {
+			"nvim-tree/nvim-web-devicons", -- optional
+		},
+	})
+
 	use("tpope/vim-fugitive")
 	use("vim-scripts/LargeFile")
 	use("scrooloose/nerdcommenter")
 	use("Lokaltog/vim-easymotion")
 	use("google/vim-searchindex")
-	use("scrooloose/nerdtree")
-	use("Xuyuanp/nerdtree-git-plugin")
-	use("airblade/vim-gitgutter")
 	use("MattesGroeger/vim-bookmarks")
 end)

@@ -1,13 +1,18 @@
 lua << EOF
+-- disable netrw at the very start of your init.lua (strongly advised)
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+
+-- set termguicolors to enable highlight groups
+vim.opt.termguicolors = true
+
 require('plugins')
-require('lsp/setup')
-require('lsp/nvim-cmp')
-require('format')
+require('init')
 EOF
 
 " formatter
 augroup FormatAutogroup
-  autocmd!
+  autocmd! FormatAutogroup
   autocmd BufWritePost * FormatWrite
 augroup END
 
@@ -81,9 +86,6 @@ nnoremap <leader>wk <c-w>k
 " vsplit map
 nnoremap <leader>vp :vsplit<CR>
 
-" fencview
-"let g:fencview_autodetect=1
-
 " Make the command line two lines high and change the statusline display to
 " something that looks useful.
 set cmdheight=2
@@ -101,37 +103,9 @@ set background=dark
 noremap <leader>sp :set paste<CR>
 noremap <leader>cp :set nopaste<CR>
 
-" nerdTree for git
-let g:NERDTreeGitStatusIndicatorMapCustom = {
-    \ "Modified"  : "✹",
-    \ "Staged"    : "✚",
-    \ "Untracked" : "✭",
-    \ "Renamed"   : "➜",
-    \ "Unmerged"  : "═",
-    \ "Deleted"   : "✖",
-    \ "Dirty"     : "✗",
-    \ "Clean"     : "✔︎",
-    \ "Unknown"   : "?"
-    \ }
+" open nvim-tree
+map <leader>t :NvimTreeToggle<CR>
+map <leader>tf :NvimTreeFindFile<CR>
 
-" open nerdTree
-map <leader>t :NERDTreeToggle<CR>
-
-" gitgutter
-nmap ]h <Plug>(GitGutterNextHunk)
-nmap [h <Plug>(GitGutterPrevHunk)
-let g:gitgutter_max_signs=1000
-
-" bookmark
-let g:bookmark_save_per_working_dir = 1
-
-" Append modeline after last line in buffer.
-" Use substitute() instead of printf() to handle '%%s' modeline in LaTeX
-" files.
-function! AppendModeline()
-  let l:modeline = printf(" vim: set ts=%d sw=%d tw=%d %set :",
-        \ &tabstop, &shiftwidth, &textwidth, &expandtab ? '' : 'no')
-  let l:modeline = substitute(&commentstring, "%s", l:modeline, "")
-  call append(line("$"), l:modeline)
-endfunction
-nnoremap <silent> <leader>ml :call AppendModeline()<CR>
+" comment
+map <leader>cc :gcc<CR>

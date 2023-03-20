@@ -2,8 +2,8 @@ local pluginKeys = {}
 
 pluginKeys.cmp = function(cmp)
     return {
-        ['<C-j>'] = cmp.mapping.select_prev_item(),
-        ['<C-k>'] = cmp.mapping.select_next_item(),
+        ['<C-k>'] = cmp.mapping.select_prev_item(),
+        ['<C-j>'] = cmp.mapping.select_next_item(),
         -- 出现补全
         ['<A-.>'] = cmp.mapping(cmp.mapping.complete(), {'i', 'c'}),
         -- 取消
