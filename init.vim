@@ -10,6 +10,9 @@ require('plugins')
 require('init')
 EOF
 
+" colorscheme
+colorscheme tokyonight-night
+
 " formatter
 augroup FormatAutogroup
   autocmd! FormatAutogroup
@@ -36,9 +39,6 @@ set expandtab
 
 " Fix backspace indentation
 set backspace=indent,eol,start
-
-" Convince Vim it can use 256 colors
-set t_Co=256
 
 let no_buffers_menu=1
 
