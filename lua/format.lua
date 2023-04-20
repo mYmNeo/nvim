@@ -81,6 +81,16 @@ require("formatter").setup({
 			end,
 		},
 
+		py = {
+			function()
+				return {
+					exe = "autopep8",
+					args = { "-" },
+					stdin = 1,
+				}
+			end,
+		},
+
 		-- Use the special "*" filetype for defining formatter configurations on
 		-- any filetype
 		["*"] = {
