@@ -119,6 +119,30 @@ require("formatter").setup({
 			end,
 		},
 
+		cmake = {
+			function()
+				return {
+					exe = "cmake-format",
+					args = {
+						"--line-width",
+						"100",
+						"--tab-size",
+						"2",
+						"--command-case",
+						"unchanged",
+						"--max-lines-hwrap",
+						"1",
+						"--max-pargs-hwrap",
+						"999",
+						"--dangle-parens",
+						"true",
+						"-",
+					},
+					stdin = true,
+				}
+			end,
+		},
+
 		-- Use the special "*" filetype for defining formatter configurations on
 		-- any filetype
 		["*"] = {
