@@ -62,33 +62,15 @@ require("formatter").setup({
 		},
 
 		json = {
-			function()
-				return {
-					exe = "jq",
-					args = { "." },
-					stdin = true,
-				}
-			end,
+			require("formatter.filetypes.json").jq,
 		},
 
 		yaml = {
-			function()
-				return {
-					exe = "yamlfmt",
-					args = { "-in" },
-					stdin = true,
-				}
-			end,
+			require("formatter.filetypes.yaml").yamlfmt,
 		},
 
 		py = {
-			function()
-				return {
-					exe = "autopep8",
-					args = { "-" },
-					stdin = 1,
-				}
-			end,
+			require("formatter.filetypes.python").autopep8,
 		},
 
 		c = {
