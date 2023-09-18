@@ -1,3 +1,6 @@
+" map leader key
+let mapleader = ","
+
 lua << EOF
 -- disable netrw at the very start of your init.lua (strongly advised)
 vim.g.loaded_netrw = 1
@@ -6,7 +9,6 @@ vim.g.loaded_netrwPlugin = 1
 -- set termguicolors to enable highlight groups
 vim.opt.termguicolors = true
 
-require('plugins')
 require('init')
 EOF
 
@@ -18,9 +20,6 @@ augroup FormatAutogroup
   autocmd! FormatAutogroup
   autocmd BufWritePost * FormatWrite
 augroup END
-
-" map leader key
-let mapleader = ","
 
 " Large file
 let g:LargeFile=10
