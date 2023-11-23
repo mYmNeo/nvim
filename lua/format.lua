@@ -125,6 +125,14 @@ require("formatter").setup({
 			end,
 		},
 
+		css = {
+			require("formatter.filetypes.css").prettier,
+		},
+
+		javascript = {
+			require("formatter.filetypes.javascript").prettier,
+		},
+
 		-- Use the special "*" filetype for defining formatter configurations on
 		-- any filetype
 		["*"] = {
