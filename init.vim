@@ -101,10 +101,3 @@ set background=dark
 " set paste
 noremap <leader>sp :set paste<CR>
 noremap <leader>cp :set nopaste<CR>
-
-" open nvim-tree
-map <leader>t :NvimTreeToggle<CR>
-map <leader>tf :NvimTreeFindFile<CR>
-
-" comment
-map <leader>cc :gcc<CR>
