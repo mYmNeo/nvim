@@ -31,7 +31,6 @@ require("config/nvim-cmp")
 require("config/lspconfig")
 require("config/format")
 require("config/copilot")
-require("config/hardtime")
 
 vim.cmd([[
 " colorscheme
