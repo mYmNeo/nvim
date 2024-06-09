@@ -93,4 +93,8 @@ return {
 		dependencies = { "nvim-lua/plenary.nvim" },
 		keys = require("keybinding/telescope").bindingOptions(),
 	},
+	-- gitsigns
+	{
+		"lewis6991/gitsigns.nvim",
+	},
 }
