@@ -2,17 +2,17 @@ function bindingOptions()
 	return {
 		{
 			"<leader>m",
-			"<cmd>GrappleTag<cr>",
+			"<cmd>Grapple tag<cr>",
 			desc = "GrappleTag",
 		},
 		{
 			"<leader>mm",
-			"<cmd>GrappleUntag<cr>",
+			"<cmd>Grapple untag<cr>",
 			desc = "GrappleUntag",
 		},
 		{
 			"<leader>pp",
-			"<cmd>GrapplePopup tags<cr>",
+			"<cmd>Grapple toggle_tags<cr>",
 			desc = "GrapplePopup",
 		},
 	}
