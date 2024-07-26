@@ -136,6 +136,10 @@ require("formatter").setup({
 			require("formatter.filetypes.xml").xmllint,
 		},
 
+		go = {
+			require("formatter.filetypes.go").gofmt,
+		},
+
 		-- Use the special "*" filetype for defining formatter configurations on
 		-- any filetype
 		["*"] = { -- "formatter.filetypes.any" defines default configurations for any
