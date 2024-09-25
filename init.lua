@@ -4,6 +4,7 @@ vim.g.loaded_netrwPlugin = 1
 
 -- set termguicolors to enable highlight groups
 vim.opt.termguicolors = true
+vim.opt.cursorline = true
 
 vim.g.mapleader = ","
 
@@ -32,10 +33,11 @@ require("config/lspconfig")
 require("config/format")
 require("config/copilot")
 require("config/gitsigns")
+require("config/tokyo-theme")
 
 vim.cmd([[
 " colorscheme
-colorscheme tokyonight-night
+colorscheme tokyonight-storm
 
 " formatter
 augroup FormatAutogroup
