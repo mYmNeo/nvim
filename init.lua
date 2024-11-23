@@ -34,6 +34,7 @@ require("config/format")
 require("config/copilot")
 require("config/gitsigns")
 require("config/tokyo-theme")
+require("config/copilot-chat")
 
 vim.cmd([[
 " colorscheme
@@ -44,9 +45,6 @@ augroup FormatAutogroup
   autocmd! FormatAutogroup
   autocmd BufWritePost * FormatWrite
 augroup END
-
-" Large file
-let g:LargeFile=10
 
 " File encoding dectection
 set fileencodings=ucs-bom,utf-8,cp936,gb18030,big5,euc-jp,euc-kr,latin1
@@ -106,9 +104,6 @@ nnoremap <leader>wh <c-w>h
 nnoremap <leader>wj <c-w>j
 nnoremap <leader>wk <c-w>k
 
-" vsplit map
-nnoremap <leader>vp :vsplit<CR>
-
 " Make the command line two lines high and change the statusline display to
 " something that looks useful.
 set cmdheight=2
@@ -121,8 +116,4 @@ set number
 " Color Theme
 syntax enable
 set background=dark
-
-" set paste
-noremap <leader>sp :set paste<CR>
-noremap <leader>cp :set nopaste<CR>
 ]])
