@@ -47,10 +47,6 @@ cmp.setup({
 			name = "luasnip",
 			priority = 10,
 		},
-		{
-			name = "copilot",
-			priority = 0,
-		},
 	},
 	mapping = require("keybinding/cmp").bindingOptions(cmp),
 	confirm_opts = {
@@ -69,7 +65,6 @@ cmp.setup({
 				luasnip = "[Snippet]",
 				buffer = "[Buffer]",
 				path = "[Path]",
-				copilot = "[Copilot]",
 			})[entry.source.name]
 			return vim_item
 		end,
@@ -79,7 +74,6 @@ cmp.setup({
 		comparators = {
 			cmp.config.compare.offset,
 			cmp.config.compare.exact,
-			require("copilot_cmp.comparators").prioritize,
 			cmp.config.compare.score,
 			cmp.config.compare.recently_used,
 			cmp.config.compare.locality,

@@ -1,3 +1,4 @@
+--[[
 require("CopilotChat").setup({
 	-- default window options
 	---- lazy.nvim opts
@@ -61,3 +62,5 @@ require("CopilotChat").setup({
 		},
 	},
 })
+]]
+--

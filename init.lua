@@ -26,15 +26,15 @@ require("config/nvim-web-devicons")
 require("config/nvim-tree")
 require("config/lspsaga")
 require("config/trouble")
-require("config/copilot-cmp")
+--require("config/copilot-cmp")
 require("config/galaxy_tabline/galaxyline_config")
 require("config/nvim-cmp")
 require("config/lspconfig")
 require("config/format")
-require("config/copilot")
+--require("config/copilot")
 require("config/gitsigns")
 require("config/tokyo-theme")
-require("config/copilot-chat")
+--require("config/copilot-chat")
 
 vim.cmd([[
 " colorscheme

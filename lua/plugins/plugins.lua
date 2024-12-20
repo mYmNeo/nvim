@@ -39,6 +39,7 @@ return {
 		"folke/trouble.nvim",
 		dependencies = "kyazdani42/nvim-web-devicons",
 	},
+	--[[
 	-- Copolit,
 	{
 		"zbirenbaum/copilot.lua",
@@ -49,6 +50,8 @@ return {
 	{
 		"zbirenbaum/copilot-cmp",
 	},
+  ]]
+	--
 	-- Formatter
 	{
 		"mhartington/formatter.nvim",
@@ -98,7 +101,8 @@ return {
 		"lewis6991/gitsigns.nvim",
 	},
 	-- copilot char
-	{
+	--[[
+  {
 		"CopilotC-Nvim/CopilotChat.nvim",
 		branch = "canary",
 		dependencies = {
@@ -111,4 +115,6 @@ return {
 		},
 		-- See Commands section for default commands if you want to lazy load on them
 	},
+  ]]
+	--
 }
