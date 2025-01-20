@@ -35,6 +35,7 @@ require("config/format")
 require("config/gitsigns")
 require("config/tokyo-theme")
 --require("config/copilot-chat")
+require("config/mini")
 
 vim.cmd([[
 " colorscheme

@@ -117,4 +117,8 @@ return {
 	},
   ]]
 	--
+	-- mini.nvim
+	{ "echasnovski/mini.move", version = "*" },
+	{ "echasnovski/mini.pairs", version = "*" },
+	{ "echasnovski/mini.surround", version = "*" },
 }
