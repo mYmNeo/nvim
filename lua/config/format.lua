@@ -68,8 +68,12 @@ require("formatter").setup({
 			require("formatter.filetypes.yaml").yamlfmt,
 		},
 
-		py = {
+		python = {
 			require("formatter.filetypes.python").autopep8,
+		},
+
+		zsh = {
+			require("formatter.filetypes.zsh").beautysh,
 		},
 
 		c = {
