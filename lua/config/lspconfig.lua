@@ -12,11 +12,11 @@ require("mason-lspconfig").setup({
 -- https://github.com/williamboman/nvim-lsp-installer#available-lsps
 -- { key: 语言 value: 配置文件 }
 local servers = {
-	gopls = require("lsp/gopls"),
+	-- gopls = require("lsp/gopls"),
 	bashls = require("lsp/bash"),
 	yamlls = require("lsp/yaml"),
 	lua_ls = require("lsp/lua"),
-	clangd = require("lsp/clangd"),
+	-- clangd = require("lsp/clangd"),
 }
 
 local on_attach = function(_, bufnr)
