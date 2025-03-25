@@ -10,15 +10,6 @@ function bindingOptions()
 			"<cmd>Telescope live_grep<cr>",
 			desc = "NvimTreeFindFile",
 		},
-		-- Show prompts actions with telescope for CopilotChat
-		{
-			"<leader>cp",
-			function()
-				local actions = require("CopilotChat.actions")
-				require("CopilotChat.integrations.telescope").pick(actions.prompt_actions())
-			end,
-			desc = "CopilotChat - Prompt actions",
-		},
 	}
 end
 

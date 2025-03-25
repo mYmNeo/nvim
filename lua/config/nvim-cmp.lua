@@ -48,7 +48,6 @@ cmp.setup({
 			priority = 10,
 		},
 	},
-	mapping = require("keybinding/cmp").bindingOptions(cmp),
 	confirm_opts = {
 		behavior = cmp.ConfirmBehavior.Replace,
 		select = false,
