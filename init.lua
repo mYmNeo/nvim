@@ -26,18 +26,13 @@ require("config/nvim-web-devicons")
 require("config/nvim-tree")
 require("config/lspsaga")
 require("config/trouble")
-require("config/galaxy_tabline/galaxyline_config")
 require("config/nvim-cmp")
 require("config/lspconfig")
 require("config/format")
 require("config/gitsigns")
-require("config/tokyo-theme")
 require("config/mini")
 
 vim.cmd([[
-" colorscheme
-colorscheme tokyonight-storm
-
 " formatter
 augroup FormatAutogroup
   autocmd! FormatAutogroup

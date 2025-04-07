@@ -8,9 +8,6 @@ return {
 	{
 		"williamboman/mason-lspconfig.nvim",
 	},
-	{
-		"folke/tokyonight.nvim",
-	},
 	-- comment
 	{
 		"numToStr/Comment.nvim",
@@ -27,10 +24,10 @@ return {
 	},
 	-- galaxyline
 	{
-		"NTBBloodbath/galaxyline.nvim",
+		"nvimdev/galaxyline.nvim",
 		-- some optional icons
 		dependencies = {
-			"kyazdani42/nvim-web-devicons",
+			"nvim-tree/nvim-web-devicons",
 			lazy = true,
 		},
 	},
