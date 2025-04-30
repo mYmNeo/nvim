@@ -22,14 +22,10 @@ return {
 		},
 		lazy = false,
 	},
-	-- galaxyline
+	-- lualine
 	{
-		"nvimdev/galaxyline.nvim",
-		-- some optional icons
-		dependencies = {
-			"nvim-tree/nvim-web-devicons",
-			lazy = true,
-		},
+	    'nvim-lualine/lualine.nvim',
+	        dependencies = { 'nvim-tree/nvim-web-devicons' }
 	},
 	-- trouble.vim
 	{

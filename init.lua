@@ -31,6 +31,7 @@ require("config/lspconfig")
 require("config/format")
 require("config/gitsigns")
 require("config/mini")
+require("config/lualine")
 
 vim.cmd([[
 " formatter
