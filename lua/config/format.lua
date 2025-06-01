@@ -37,27 +37,7 @@ require("formatter").setup({
 		},
 
 		sh = {
-			function()
-				local shiftwidth = vim.opt.shiftwidth:get()
-				local expandtab = vim.opt.expandtab:get()
-
-				if not expandtab then
-					shiftwidth = 0
-				end
-
-				local path = table.concat({
-					util.get_current_buffer_file_dir(),
-					util.get_current_buffer_file_name(),
-				}, "/")
-				return {
-					exe = "beautysh",
-					args = {
-						"--indent-size",
-						shiftwidth,
-						util.escape_path(path),
-					},
-				}
-			end,
+			require("formatter.filetypes.sh").shfmt,
 		},
 
 		json = {
@@ -70,10 +50,6 @@ require("formatter").setup({
 
 		python = {
 			require("formatter.filetypes.python").autopep8,
-		},
-
-		zsh = {
-			require("formatter.filetypes.zsh").beautysh,
 		},
 
 		c = {
