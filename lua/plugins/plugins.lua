@@ -32,19 +32,6 @@ return {
 		"folke/trouble.nvim",
 		dependencies = "kyazdani42/nvim-web-devicons",
 	},
-	--[[
-	-- Copolit,
-	{
-		"zbirenbaum/copilot.lua",
-		cmd = "Copolit",
-		event = "InsertEnter",
-	},
-	-- Copolit Cmp
-	{
-		"zbirenbaum/copilot-cmp",
-	},
-  ]]
-	--
 	-- Formatter
 	{
 		"mhartington/formatter.nvim",
@@ -93,23 +80,6 @@ return {
 	{
 		"lewis6991/gitsigns.nvim",
 	},
-	-- copilot char
-	--[[
-  {
-		"CopilotC-Nvim/CopilotChat.nvim",
-		branch = "canary",
-		dependencies = {
-			{ "zbirenbaum/copilot.lua" }, -- or zbirenbaum/copilot.lua
-			{ "nvim-lua/plenary.nvim" }, -- for curl, log wrapper
-		},
-		build = "make tiktoken", -- Only on MacOS or Linux
-		opts = {
-			-- See Configuration section for options
-		},
-		-- See Commands section for default commands if you want to lazy load on them
-	},
-  ]]
-	--
 	-- mini.nvim
 	{ "echasnovski/mini.move", version = "*" },
 	{ "echasnovski/mini.pairs", version = "*" },

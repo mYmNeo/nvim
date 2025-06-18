@@ -1,0 +1,171 @@
+; vim: ft=colortemplate fdm=marker et ts=2 sw=2
+
+; Information {{{
+; Mandatory
+Full name:     Penumbra
+Short name:    penumbra
+Author:        Michael Bulat
+; Optional
+Description:   Template for Penumbra dark colorscheme
+License:       MIT
+; Prefix for options: short name is used if this key is not present:
+Option Prefix: penumbra
+; }}}
+
+; Documentation {{{
+; }}}
+
+; Common linked groups {{{
+Boolean           -> Constant
+Character         -> Constant
+Conditional       -> Statement
+CurSearch         -> IncSearch
+Debug             -> Special
+Define            -> PreProc
+Delimiter         -> Special
+Exception         -> Statement
+Float             -> Constant
+Function          -> Identifier
+Include           -> PreProc
+Keyword           -> Statement
+Label             -> Statement
+Macro             -> PreProc
+Number            -> Constant
+Operator          -> Statement
+PopupSelected     -> PmenuSel
+PreCondit         -> PreProc
+QuickFixLine      -> Search
+Repeat            -> Statement
+SpecialChar       -> Special
+SpecialComment    -> Special
+StatusLineTerm    -> StatusLine
+StatusLineTermNC  -> StatusLineNC
+StorageClass      -> Type
+String            -> Constant
+Structure         -> Type
+Tag               -> Special
+Typedef           -> Type
+; See `:help lCursor`
+lCursor           -> Cursor
+; }}}
+
+Background: dark
+
+; Color palette {{{
+; Color name         GUI                     Base256     Base16 (optional)
+Color: sunplus       rgb(255, 253, 251)        231         White
+Color: sun           rgb(255, 247, 237)        255         White
+Color: sunminus      rgb(242, 230, 212)        254         White
+Color: skyplus       rgb(190, 190, 190)        250         LightGray
+Color: sky           rgb(143, 143, 143)        246         Gray
+Color: skyminus      rgb( 99,  99,  99)        241         Gray
+Color: shadeplus     rgb( 62,  64,  68)        238         DarkGray
+Color: shade         rgb( 48,  51,  56)        236         DarkGray
+Color: shademinus    rgb( 36,  39,  43)        235         Black
+
+Color: red           rgb(202, 115, 108)        167         DarkRed
+Color: orange        rgb(186, 130,  58)        137         Brown
+Color: yellow        rgb(141, 151,  65)        100         DarkYellow
+Color: green         rgb( 71, 164, 119)        72          DarkGreen
+Color: cyan          rgb(  0, 162, 175)        37          DarkCyan
+Color: blue          rgb( 87, 148, 208)        67          DarkBlue
+Color: purple        rgb(148, 129, 204)        104         DarkMagenta
+Color: magenta       rgb(188, 115, 164)        169         LightMagenta
+
+Color: redplus       rgb(223, 127, 120)        174         Red
+Color: orangeplus    rgb(206, 144,  66)        172         Brown
+Color: yellowplus    rgb(156, 167,  72)        143         LightYellow
+Color: greenplus     rgb( 80, 181, 132)        72          LightGreen
+Color: cyanplus      rgb(  0, 179, 194)        37          LightCyan
+Color: blueplus      rgb( 97, 163, 230)        75          LightBlue
+Color: purpleplus    rgb(164, 143, 225)        140         LightMagenta
+Color: magentaplus   rgb(208, 128, 182)        175         LightMagenta
+
+Color: redplusplus     rgb(245, 140, 129)        210         Red
+Color: orangeplusplus  rgb(224, 159,  71)        215         Brown
+Color: yellowplusplus  rgb(169, 184,  82)        143         LightYellow
+Color: greenplusplus   rgb( 84, 199, 148)        79          LightGreen
+Color: cyanplusplus    rgb(  0, 196, 215)        80          LightCyan
+Color: blueplusplus    rgb(110, 178, 253)        75          LightBlue
+Color: purpleplusplus  rgb(182, 156, 246)        147         LightMagenta
+Color: magentaplusplus rgb(229, 140, 197)        175         LightMagenta
+; You may use hexadecimal values, too, and you may provide an explicit base-256 color:
+; }}}
+; Terminal colors {{{
+Term colors: shade red green yellow blue magenta cyan sky
+Term colors: shadeplus orange greenplus yellowplus
+Term colors: blueplus purple cyanplus skyplus
+; }}}
+
+; Default highlight groups {{{
+Variant: gui 256 8
+  Normal           sky             shade
+  Terminal         sky             shade
+
+; Group              Foreground      Background        Attributes
+ColorColumn          fg              red
+Conceal              none            none
+Cursor               sky             shade
+CursorColumn         none            shadeplus
+CursorLine           none            shadeplus
+CursorLineNr         none            shadeplus         bold
+DiffAdd              green           shadeplus         s=green
+DiffChange           yellow          shadeplus         s=yellow
+DiffDelete           red             shadeplus         bold
+DiffText             blue            shadeplus         s=blue
+Directory            blue            none
+EndOfBuffer          none            none
+ErrorMsg             red             shade             reverse
+FoldColumn           sky             shade
+Folded               sky             shadeplus         italic
+IncSearch            green           shade             t=reverse g=standout
+LineNr               skyminus        shadeplus
+MatchParen           sun             shade
+ModeMsg              blue            none
+MoreMsg              blue            none
+NonText              orange          none
+Pmenu                sky             shademinus
+PmenuSbar            sky             shademinus
+PmenuSel             sky             sun               reverse
+PmenuThumb           sky             shadeplus
+Question             cyan            none
+Search               yellow          none              reverse
+SignColumn           sky             shade
+SpecialKey           green           shadeplus
+SpellBad             red             none              t=underline,reverse g=undercurl,reverse s=red
+SpellCap             purple          none              t=underline,reverse g=undercurl,reverse s=orange
+SpellLocal           yellow          none              t=underline,reverse g=undercurl,reverse s=yellow
+SpellRare            cyan            none              t=underline,reverse g=undercurl,reverse s=cyan
+StatusLine           sky             shade             reverse
+StatusLineNC         sky             sun               reverse
+TabLine              sky             shade             reverse
+TabLineFill          sky             shade
+TabLineSel           blue            shade             reverse
+Title                orange          none              bold
+VertSplit            sky             shade
+Visual               sky             shade             reverse
+VisualNOS            none            shademinus        reverse
+WarningMsg           orange          shade
+WildMenu             sun             shade             reverse
+; Other conventional group names (see `:help group-name`)
+Comment              skyminus        none              italic
+Constant             cyan            none
+Error                red             shade             reverse
+Identifier           blue            none
+Ignore               none            none
+PreProc              red             none
+Special              green           none
+Statement            yellow          none
+Todo                 magenta         none              bold
+Type                 orange          none
+Underlined           purple          none
+; See `:help CursorIM`
+CursorIM             shade            fg
+; See `:help window-toolbar`
+ToolbarLine          none            shade
+ToolbarButton        sky             shade             bold
+; }}}
+
+; Additional highlight groups {{{
+; Add additional highlight groups here if you want
+; }}}

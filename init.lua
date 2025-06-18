@@ -7,6 +7,7 @@ vim.opt.termguicolors = true
 vim.opt.cursorline = true
 
 vim.g.mapleader = ","
+vim.g.t_Co = 256
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
@@ -33,6 +34,10 @@ require("config/mini")
 require("config/lualine")
 
 vim.cmd([[
+colorscheme penumbra
+highlight Normal guibg=NONE ctermbg=NONE
+highlight NonText guibg=NONE ctermbg=NONE
+
 " formatter
 augroup FormatAutogroup
   autocmd! FormatAutogroup
