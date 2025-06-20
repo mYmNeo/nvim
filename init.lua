@@ -32,6 +32,7 @@ require("config/format")
 require("config/gitsigns")
 require("config/mini")
 require("config/lualine")
+require("config/folding")
 
 vim.cmd([[
 colorscheme penumbra
