@@ -33,14 +33,6 @@ return {
 	{
 		"mhartington/formatter.nvim",
 	},
-	-- tree
-	{
-		"nvim-tree/nvim-tree.lua",
-		dependencies = {
-			"kyazdani42/nvim-web-devicons", -- optional
-		},
-		keys = require("keybinding/nvim-tree").bindingOptions(),
-	},
 	-- lsp
 	{
 		"nvimdev/lspsaga.nvim",
@@ -134,5 +126,16 @@ return {
 				},
 			},
 		},
+	},
+	-- oil
+	{
+		"stevearc/oil.nvim",
+		---@module 'oil'
+		---@type oil.SetupOpts
+		opts = {},
+		-- Optional dependencies
+		dependencies = { "nvim-tree/nvim-web-devicons" }, -- use if you prefer nvim-web-devicons
+		-- Lazy loading is not recommended because it is very tricky to make it work correctly in all situations.
+		lazy = false,
 	},
 }

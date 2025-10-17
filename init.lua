@@ -24,7 +24,6 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup("plugins")
 
 require("config/nvim-web-devicons")
-require("config/nvim-tree")
 require("config/lspsaga")
 require("config/trouble")
 require("config/lspconfig")
@@ -33,6 +32,7 @@ require("config/gitsigns")
 require("config/mini")
 require("config/lualine")
 require("config/folding")
+require("config/oil")
 
 vim.cmd([[
 colorscheme penumbra

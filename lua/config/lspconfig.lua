@@ -47,8 +47,7 @@ local on_attach = function(_, bufnr)
 	vim.keymap.set("n", "<space>q", vim.diagnostic.setloclist, opts)
 end
 
-local cfg = require("lspconfig")
 for name, _ in pairs(servers) do
 	servers[name].on_attach = on_attach
-	cfg[name].setup(servers[name])
+	vim.lsp.config(name, servers[name])
 end
